@@ -71,7 +71,7 @@
 % \usepackage{pgfplotstable}  % Para gerar tabelas automaticamente a partir de arquivos com dados
 \usepackage{filecontents}   % Para colocar o conteúdo de um arquivo dentro de um arquivo tex
 \usepackage{todonotes}      % Para criar anotações durante o desenvolvimento do texto
-%\usepackage{multirow}       % Permite fazer tabelas com múltiplas linhas
+\usepackage{multirow}       % Permite fazer tabelas com múltiplas linhas
 %\let\newfloat=\undefined    % Workaround para usar o pacote algorithm
 %\usepackage{algorithm}      % Para escrever algoritmos
 %\usepackage{clrscode}       % Para escrever algoritmos
@@ -81,7 +81,10 @@
 \usepackage{colortbl}        % Cronograma (Tabelas)
 \usepackage[autostyle]{csquotes} % Citações
 \usepackage{url}
-\usepackage{cleveref}
+\usepackage{hhline}
+\usepackage[nameinlink]{cleveref}
+\usepackage{makecell}
+\usepackage{rotating}
 
 % \usepackage{enumerate}
 \usepackage{enumitem}
@@ -408,7 +411,7 @@ Bachelor}
 % Nome(s) do(s) arquivo(s) .bib (sem a extensão)
 \bibliography{bibliografia}
 
-% \input{postextuais/apendices} % Apêndices [OPCIONAL]
+\input{postextuais/apendices} % Apêndices [OPCIONAL]
 \input{postextuais/anexos} % Anexos [OPCIONAL]
 \printindex % Índice Remissivo [OPCIONAL]
 
