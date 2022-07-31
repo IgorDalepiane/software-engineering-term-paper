@@ -1,0 +1,63 @@
+\begin{landscape}
+\begin{figure}[!htb]
+\caption{Taxonomy of performance testing tools represented by feature model.}
+\label{fig:featuremodel}
+\begin{adjustbox}{max width=1.5\textwidth}
+%% https://tex.stackexchange.com/questions/335708/feature-diagram-in-latex
+    \begin{forest}  
+    disjunction tree,
+    disjuncts from'=1,
+    concrete from'=1,
+    concrete colour=blue!55!cyan!40,
+    abstract colour=blue!85!cyan!15,
+    draw colour=darkgray,
+    [Performance Testing Process
+        [Profiles/Roles, mandatory, l=25mm
+            [Performance Engineer, l=20mm
+                [Architect, l=20mm]
+                [Tester, l=20mm]
+                [Analyst, l=20mm]
+            ]
+        ]
+        [Methods, mandatory, l=25mm
+            [Scripting, l=20mm]
+            [CR, l=20mm]
+            [MBT, l=20mm]
+        ]
+        [Artifacts, mandatory, l=25mm
+            [Test Plan, optional, l=20mm]
+            [Model, optional, l=20mm]
+            [Script, l=20mm]
+            [Workload, l=20mm]
+            [Scenario, l=20mm]
+            [Test Report, l=20mm]
+        ]
+        [Approaches, mandatory, l=25mm,
+            [Load, l=20mm]
+            [Stress, l=20mm]
+            [Endurance, l=20mm]
+            [Spike, l=20mm]
+        ]
+        [Stages, mandatory, l=71mm
+            [Pre-Test, mandatory, l=20mm
+                [Planning, optional, l=20mm]
+                [Scripting, l=20mm]
+                [Design, l=20mm]
+                [Configuration, l=20mm]
+            ]
+            [Test, mandatory, l=20mm
+                [Execution, l=20mm]
+                [Monitoring, l=20mm]
+            ]
+            [Post-Test, mandatory, l=20mm
+                [Analysis, optional, l=20mm]
+                [Reporting, l=20mm]
+            ]
+        ]
+    ]
+    \end{forest}
+    \end{adjustbox}
+    \centering
+    \fonte{Author.}
+    \end{figure}
+\end{landscape}

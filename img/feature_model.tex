@@ -1,0 +1,94 @@
+\usetikzlibrary{angles,shadows.blur,positioning,backgrounds}
+\forestset{
+%   declare count register=disjuncts from,
+%   disjuncts from'=0,
+%   declare count register=colega from,
+  colega colour/.code={\colorlet{colegacol}{#1}},
+  autor colour/.code={\colorlet{autorcol}{#1}},
+  draw colour/.code={\colorlet{drawcol}{#1}},
+%   colega colour=gray,
+%   autor colour=white,
+  draw colour=black,
+  /tikz/colega/.style={fill=white, draw=drawcol},
+  /tikz/autor/.style={fill=green!25, draw=drawcol},
+  disjunct/.style={
+    tikz+={\path (.parent) coordinate (A) -- (!u.children) coordinate (B) -- (!ul.parent) coordinate (C) pic [fill=drawcol] {angle};}
+  },
+  disjunction tree/.style={
+    where={isodd(n_children())}{
+      for n={int((n_children()+1)/2)}{calign with current},
+    }{
+      calign=midpoint,
+    },
+    before typesetting nodes={
+      for nodewalk={
+        filter/.wrap pgfmath arg={{level>=##1}{n_children()>1}}{(disjuncts_from)}
+      }{
+        or,
+      },
+      tikz+={
+        [font=\sffamily]
+        \node (l) [anchor=east] at (current bounding box.north west) {Legenda};
+        \foreach \i/\j [remember=\i as \k (initially l)] in {autor/Autor,colega/Colega}
+        {
+          \node (\i) [below=20pt of \k.north, anchor=north, text centered, \i, minimum width=5pt,] {};
+          \node (\j) [right=5pt of \i.center, anchor=west] {\j};
+        };
+        \draw [drawcol] (or.south west) coordinate (A) -- (or.north) coordinate (B) -- (or.south east) coordinate (C) pic [fill=drawcol, angle radius=5pt] {angle};
+        \node (c) [below=0pt of Colega.south] {};
+        \scoped[on background layer]{\node [draw, fill=white, blur,fit=(l) (Autor) (Colega) (c)] {};}
+      },
+    },
+    for tree={
+      parent anchor=children,
+      child anchor=parent,
+      l'+=10mm,
+      fill=gray!15,
+      text height=2ex,
+      text depth=.5ex,
+      font=\sffamily,
+    }
+  },
+}
+
+% \begin{landscape}
+\begin{figure}[!htb]
+\label{fig:featuremodel}
+\resizebox{.8\textwidth}{!}{
+\begin{adjustbox}{max width=1.5\textwidth}
+%% https://tex.stackexchange.com/questions/335708/feature-diagram-in-latex
+    \begin{forest}  
+    disjunction tree,
+    draw colour=darkgray,
+    [Extensionly, fill=blue!15, draw=drawcol
+        [Back-end, autor,
+            [Manter ACEs, autor]
+            [Testes, autor
+                [Funcionais, autor]
+                [Unitários, autor]
+            ]
+            [Certificados, autor, name=c
+                [Geração, autor]
+                [Validação, autor]
+                [Solicitação, colega]
+            ]
+        ]
+        [Front-end, colega, name=f 
+            [Processos, colega
+                [Usuários, colega]
+                [Eventos, colega]
+                [Atividades, colega]
+            ]
+            [Divulgação, colega]
+        ]
+        
+    ]
+    \draw (f.south) -- (c.north); % certificados
+    \end{forest}
+    \end{adjustbox}
+}
+    \centering
+    \caption{Separação de tarefas representado por Feature Model. Fonte: Autor}
+    \end{figure}
+% \end{landscape}
+
