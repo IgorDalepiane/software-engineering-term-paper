@@ -2,4 +2,248 @@
 \chapter{GREY LITERATURE}\label{grey_literature}
 %==============================================================================
 
-\section{}\label{}
+Before beginning to develop the solution itself, it would be extremely beneficial to conduct a systematic review of the grey literature to map and assess existing tools and solutions that already address the issue of managing outreach activities in the context of \acp{HEI}. This research will ultimately result in a software product. Two authors did the review. Although the two term papers were prepared independently, as was already indicated, the artifacts produced to support the study were produced jointly.
+
+The systematic review of the gray literature is described in this chapter. Additionally, data gathered during the study that is pertinent to the creation of the target product will be presented. In addition to a thorough examination and comparison of the chosen tools, the protocol established to conduct the evaluation will be covered, citing details such research questions, inclusion and exclusion criteria, extracted data, and search strings.
+
+In this manner, the chapter is structured: Introduced in the \Cref{sec:gl-background} are words and ideas utilized in the study. The technique outlined by the authors will be presented in \Cref{sec:gl-planning}. The methods used in the study and the information gathered to address the research questions will be explained in the section on reporting \Cref{sec:gl-reporting}, while the section on validity \Cref{sec:gl-validity} highlights risks to the study's validity. The systematic review is concluded by \Cref{sec:gl-considerations}.
+
+\section{Background}\label{sec:gl-background}
+
+The following definition of grey literature comes from \citeonline{garousi2019guidelines}:
+\begin{citacao}
+  <grey literature> is produced at all levels of government, academia, business, and industry in print and electronic formats, but is not controlled by commercial publishers, or that is, where publication is not the main activity of the producing body.
+\end{citacao}
+
+The quality of software described as a ``black box'' is one in which the internal workings of the system are unknown; its use solely concentrates on the outputs produced in response to chosen inputs and execution conditions \citeonline{nidhra2012black}.
+
+This phrase was used in relation to the Google search engine, where it is unknown exactly what occurs internally other than the fact that occasionally, despite the identical search word, the results differ just little.
+
+\section{Planning}\label{sec:gl-planning}
+
+Due to the limited amount of formal works published on the issue of outreach activities management, the authors determined that a systematic review of the grey literature would be more interesting and valuable to the study than one in the white literature.
+
+\subsection{Reasons for Carrying out the Review}\label{sec:gl-planning-motives}
+
+The following were the key justifications given by the authors to include a review of grey literature in their study:
+\begin{inparaenum}[(i)]
+    \item More tools than formal articles in search results;
+    \item Very few results were obtained when the search terms were applied to white literature;
+  \item There are a number of tools and solutions without published articles;
+  \item The authors are looking for tools in order to gather inspiration and useful design ideas for the creation of the intended product.
+\end{inparaenum}
+
+The questions and their responses that were used to make the choice to conduct the review of the grey literature can be found in the \Cref{tab:questoesgarousi}. Additionally, the following objectives were specified for carrying out the review:
+
+\begin{inparaenum}[(i)]
+  \item Find free tools that help academic management in some way;
+  \item Look for features in tools already in existence and
+  \item Validate concepts for the features and information that will be used in the solution.
+\end{inparaenum}
+
+\input{componentes/4-research-questions-garousi}
+
+\subsection{Research Questions}\label{sec:gl-planning-rq}
+
+The research questions that the authors have identified for the systematic review are listed in the \Cref{tab:research-questions}.
+
+\input{componentes/4-defined-rq.tex}
+
+The search terms were developed by modifying the approach utilized in \cite{godin2015applying}. The first step was to establish search phrases using words like \textbf{extensão} (outreach), \textbf{programa} (program), \textbf{projeto} (project), \textbf{gerenciamento} (management) and \textbf{atividade} (activity).
+
+Additionally, because the search engine's site filter was initially employed and the scope of the project was restricted to outreach initiatives at Brazilian universities, only websites with the specified ``.edu.br'' ending would be displayed. Later on, it was discovered that it would have been wiser to remove the filter because some private universities do not use the .edu domain extension.
+
+In the end, the authors generated ten search strings, seven of which combined the terms ``\textbf{extensão} (\textbf{programa} | \textbf{projeto})'', which were deemed to be the most pertinent terms. There were 100 entries per string and a limit of only using the first ten pages of the search engine's results meant that there were a total of 1000 records.
+
+After the initial search, the keyword \acs{SIGAA} was eliminated because it is a resource used by many public universities called \citeonline{das2013sistema}, which clogged the results with virtually the same record and would have concealed other alternatives. In \Cref{tab:gl-strings}, the defined strings are displayed.
+
+\input{componentes/4-search-strings.tex}
+
+The Google search engine was used to conduct the actual search for the strings.
+
+\subsection{Inclusion Criteria}\label{sec:gl-planning-inc}
+
+The inclusion criteria were developed over the course of two stages. The authors implemented a filter in the first stage to distinguish tools from catalogs due to the significant number of institutional sites that were simply catalogs of outreach initiatives. The outcome must meet at least three of the following standards in order to be considered:
+\begin{inparaenum}[(a)]
+  \item User login;
+  \item Registration of activities;
+  \item Activity listing;
+  \item Possibility of signing up for outreach activities.
+\end{inparaenum}
+
+Step 2 was implemented once the results had been filtered using the aforementioned criteria. It had stricter definitions of what was required to be included. They are listed in \Cref{tbl:gl-inclusion-criteria} as follows:
+
+\input{componentes/4-inclusion-criteria.tex}
+
+\subsection{Exclusion Criteria}\label{sec:gl-planning-exc}
+
+Exclusion criteria were also established, and any result that met even one of these was automatically disqualified from further consideration. Six criteria were initially created by the authors, but following alignments with the adviser, it was determined that two of them were superfluous. The remaining factors, which affected the results, are shown in \Cref{tbl:gl-exclusion-criteria}.
+
+\input{componentes/4-exclusion-criteria.tex}
+
+\subsection{Quality Criteria}\label{sec:gl-planning-qlty}
+
+Five quality criteria that are focused on traits deemed relevant within a tool and how it differs from the others were created to evaluate the quality of the tools that passed the inclusion and exclusion criteria. The scale used in the article by \citeonline{iung2020systematic} was modified to quantify the scores for each criterion and is as follows:
+\begin{inparaenum}[(i)]
+  \item \textbf{Y}es: 1.0;
+  \item \textbf{P}artially: 0.5;
+  \item \textbf{N}o: 0.
+\end{inparaenum}
+The defined criteria are shown in \Cref{tbl:gl-quality-criteria}.
+
+\input{componentes/4-quality-criteria.tex}
+
+\subsection{Data Extraction Strategy}\label{sec:gl-planning-datastrategy}
+
+After the final list of tools is chosen, a manual data extraction is done in order to respond to the research questions that have been established \Cref{tab:research-questions}. In the beginning, we look for all the \ac{OA} functionalities the program has, creating a data matrix. There is a list of all the various capabilities that were discovered within the findings. The matrix is discussed in more detail in the \Cref{gl-feature-matrix} below.
+
+Afterwards, a new manual extraction was carried out while highlighting the first four most pertinent properties that were shared by all of the studied tools. Now with the intention of discovering every feature these solutions possessed. It is much simpler to handle comparable issues that will ultimately arise when constructing the goal product if this data is refined and tabulated.
+
+\section{Reporting}\label{sec:gl-reporting}
+
+With the goal of starting and terminating on days that were close together, the search and record mapping were conducted between February 17 and February 20, 2022, decreasing one of the dangers to validity.
+
+\subsection{Research}\label{sec:gl-research}
+
+Both authors contributed equally to the overall workload. In this manner, each person examined five of the ten pages using the search term, yielding fifty results per search string and 500 results per author. The first set of results, as displayed in \Cref{tbl:gl-search-results}, consisted of 169.
+
+There were 56 results left after applying the first step of the inclusion criterion. The findings were then further decreased once the verification with the second step of the inclusion and exclusion criteria was completed, with 19 tools failing \textbf{IC 1.}, 8 tools failing \textbf{IC 2.}, and 24 tools being rejected for failing \textbf{IC 3.} Regarding the exclusion criterion, only one tool was eliminated by \textbf{ECs 1. and 2.}, as well. However, 14 tools failed \textbf{EC 3.}, and the same number failed \textbf{EC 4.} As can be seen in \Cref{fig:gl-results-criteria}, there were only 12 tools and websites left to be examined.
+
+\input{componentes/4-search-results.tex}
+
+\begin{figure}[!htb]
+  \caption{Results x Criteria}\label{fig:gl-results-criteria}
+  \begin{center}
+    \includegraphics[width=12cm]{img/4-results.png}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\subsection{Data Extraction}\label{sec:gl-data-extraction}
+
+This section explains how the two data extractions from the discovered tools were carried out: one for the feature matrix and the other to collect more details on the key features shared by the tools.
+
+\subsubsection{Feature Matrix}\label{sec:gl-feature-matrix}
+
+It was important to develop a functions matrix among the filtered results after the research was completed in order to apply the quality standards. The authors were able to determine which features were present in the examined tools the most frequently in this method. There were determined to be 37 traits in total, some of which repeated more frequently than others. The matrix can be seen in \Cref{fig:gl-matrix}.
+
+\begin{figure}[!htb]
+  \caption{Feature Matrix}\label{fig:gl-matrix}
+  \begin{center}
+    \includegraphics[width=16cm]{img/4-functionality-matrix.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+Lighter gray highlights were utilized to draw attention to the characteristics that were shared by all of the examined tools and websites so that they could be used as criteria in the subsequent stage of data extraction.
+
+\subsubsection{More Information from Important Features}\label{sec:gl-data-extraction-2}
+
+The goal of the second data extraction was to determine which data was utilized to 
+\begin{inparaenum}[(i)]
+  \item Listing of outreach activities;
+  \item Detailed page of an activity;
+  \item Enrollment of a participant into an activity;
+  \item Registration of users external to the institution.
+\end{inparaenum}
+
+It was challenging to unify the analysis because each tool has its own format and attribute naming, thus the original names were retained. To prevent confusion, tools that lacked the chosen features have been highlighted in grey rather than having the cells left blank. Because it was nearly impossible to try to follow a pattern for all the tools, the extracted findings are written informally. The extracted data can be seen in \Cref{gl-additional-extraction}.
+
+\begin{figure}[!htb]
+  \caption{Additional Information Extraction}\label{fig:gl-additional-extraction}
+  \begin{center}
+    \includegraphics[width=16cm]{img/4-data-extraction-2.pdf}
+  \end{center}
+  \fonte{Author.}
+\end{figure}
+
+\subsection{Tool Classification}\label{sec:gl-tool-classification}
+
+The extracted and tabulated data allowed for the classification of the tools based on the previously established quality standards. The scoring range for a tool is from 0 (zero) to 5 (five). The final results are shown in the table \Cref{tbl:gl-quality-criteria-results}.
+
+\input{componentes/4-quality-criteria-results.tex}
+
+With this classification, it is clear that the \ac{CAEX} tool and \ac{SIGAA} received the highest ratings, which was exactly what was anticipated. First, \ac{SIGAA} is one of the academic management tools that institutions in the nation utilize the most, and \ac{CAEX} is the tool that offered the most distinctive features. As a result, they were two instruments that had a lot of promise and were very helpful in gathering data to create the goal product.
+
+\subsection{Answering the Research Questions}\label{sec:gl-answer-research-questions}
+
+The research questions are under the \Cref{tab:research-questions} and were introduced earlier in the study. For convenience's sake, each question is also explained below.
+
+\begin{itemize}
+  \item \textbf{RQ 1.} What tools currently exist that perform academic management?
+
+        This is a question that also refers to some instruments that were eliminated during the use of inclusion and exclusion criteria. In this instance, 36 tools supporting academic management of various kinds were found, but only 12 of them meet the required requirements and are mentioned in the tool matrix in \Cref{fig:gl-matrix}.
+  \item \textbf{RQ 1.1.} Which ones have related functionality or support outreach activities?
+
+        The following tools were found, as it was already demonstrated in the \Cref{fig:gl-matrix}, which describes the relationships between tools and features:
+        \begin{inparaenum}[(1)]
+          \item Cachalote;
+          \item CAEX;
+          \item Einstein;
+          \item ENS;
+          \item Santa Marcelina;
+          \item SGE;
+          \item SIEX;
+          \item SIG;
+          \item SIGAA;
+          \item SUAP;
+          \item UNINASSAU and
+          \item UNINTER.
+        \end{inparaenum}
+
+  \item \textbf{RQ 1.2.} What are the features offered by these tools?
+
+        The features matrix, which is present in \Cref{fig:gl-matrix} and has a total of 37 features, contains a list of every feature that was discovered.
+  \item \textbf{RQ 1.3.} What are the most common features between this type of tool?
+
+        The most common functionalities in this type of tool are:
+        \begin{inparaenum}[(i)]
+          \item A login system;
+          \item Lististing of \aclp{OA};
+          \item \ac{OA} details page;
+          \item \ac{OA} enrollment and
+          \item Registration of external users.
+        \end{inparaenum}
+        The ability to search for events by text is another feature that is present regularly but not as frequently as the other features; 8 of the tools were found to support this functionality.
+  \item \textbf{RQ 1.4.} What data do the tools use in relation to activities, participant registration and user registration?
+
+        By analyzing the second data extraction presented in \Cref{sec:gl-data-extraction-2}, the most common fields for \acp{OA} are:
+        \begin{inparaenum}[(a)]
+          \item Title;
+          \item Duration;
+          \item Enrollment period;
+          \item Contact information;
+          \item Description;
+          \item Target audience;
+          \item Faculty and
+          \item Schedule.
+        \end{inparaenum}
+
+        Regarding enrollment, the most common fields found are:
+        \begin{inparaenum}[(a)]
+          \item Participant's personal data;
+          \item Institutional affiliation;
+          \item Participant type and
+          \item Information about the participant's disability, if any.
+        \end{inparaenum}
+
+        When it comes to user registration, these tools mostly employ personal information, authentication information, and an address; however, some also request information about the institution, participant type, and professional data.
+\end{itemize}
+
+\section{Validity}\label{sec:gl-validity}
+
+Some validity threats were found as the systematic review mapping process progressed. While the writers were able to lessen the majority of them, some still need to be addressed. They are as follows:
+
+\begin{itemize}
+  \item When comparing the findings they both found throughout the study phase, the authors observed that the search results varied just little, between one or two different records. Although it was a hazard that could be easily reduced, it couldn't be fully ruled out. In order to do the search in anonymous mode, the approach employed was to log out of the account currently logged into the browser. As a result, there were fewer divergences overall, however occasionally divergent outcomes did occur.
+  \item Functionalities of the tools weren't checked with the creators. Unfortunately, the authors were unable to reach any universities to inquire about the management solution being employed.
+  \item The authors aimed to conduct the search in as little time as feasible, beginning and finishing it in just three days, in order to reduce the divergence of findings. As the search engine is regarded as a ``black box'', making it challenging to predict the precise results that will emerge with each search string, the longer the delay, the greater the chance that risks to the study will be introduced.
+\end{itemize}
+
+\section{Considerations}\label{sec:gl-considerations}
+
+Finding tools that are similar to the intended outcome of the entire study was made possible by this thorough review of the grey literature. Before undertaking the review, no knowledge of the current status of the field or the most popular solutions employed by Brazilian \ac{HEI} existed.
+
+A wealth of useful data was gathered regarding the instruments used today. It was now much more obvious what \aclp{OA} management and processes covered. This information will be useful when putting the objective product into use, which seeks to provide a comprehensive solution for \ac{OA} management.
+
+Furthermore, the review protocol's definitions of all the research questions could all be answered.
