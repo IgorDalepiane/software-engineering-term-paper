@@ -151,7 +151,7 @@ This section describes the design decisions taken to carry out this study and th
     % \item[\textbf{Programming Language:}] \ac{TS} foi escolhido porque ela fornece diversas soluções e frameworks disponiveis para uso, que simplificam o desenvolvimento. Um ponto positivo e que se destaca da linguagem base \ac{JS}, é que esta linguagem adiciona tipagem estática ao código, reduzindo muito as chances de erro por sintaxe e agilizando o desenvolvimento. Outro fator de escolha se da pela experiencia dos desenvolvedores, que ja estão familiarizados com esta linguagem e seus frameworks, a mesma linguagem foi escolhida no frontend, facilitando o entendimento entre os códigos fonte.  
     
     \item[\textbf{Programming Language:}] \ac{TS} was chosen because it enriches \ac{JS} with a module system, classes, interfaces, and a static type system, as said by \textcite{Bierman_2014}.
-    The author also comments that a typed language helps a lot in development, finding and preventing bugs, providing auto-completion, hover tips, navigation through the code, and also helps in code refactoring.
+    The authors also comments that a typed language helps a lot in development, finding and preventing bugs, providing auto-completion, hover tips, navigation through the code, and also helps in code refactoring.
     % A positive point that stands out from the base language \ac{JS} is that this language adds static typing to the code, greatly reducing the chances of syntax errors and speeding up development. 
     Another choice factor is given by the experience of the developers, who are already familiar with this language and its frameworks, the same language was chosen in the frontend, facilitating the understanding between the source codes;
     % ===================================
@@ -159,7 +159,7 @@ This section describes the design decisions taken to carry out this study and th
     % ===================================
     % \item[\textbf{Framework:}] NestJS desenvolvido por \cite{nestDocs}, foi o framework escolhido devido o seu potencial e facilidade em escalabilidade de aplicações. Ele possui uma organizaçao de arquivos muito simples, chamada de model-service-controller, onde a camada model é responsavel pelo gerenciamento de dados, controller é responsável pelo gerenciamento de entradas e saidas de requisiçoes na nossa aplicaçao e a camada service contém toda a lógicade implementação, parte dessa organizaçao pode ser vista na \Cref{fig:architecture}.
     
-    \item[\textbf{Framework:}] NestJS developed by \textcite{nestDocs}, was the chosen framework due to its potential and ease of application scalability. It has a very simple file organization, called model-service-controller, where the model layer is responsible for managing data, controller is responsible for managing input and output requests in our application and the service layer contains all the logic of implementation, part of this organization can be seen in \Cref{fig:architecture};
+    \item[\textbf{Framework:}] NestJS developed by \textcite{nestDocs}, was the chosen framework due to its potential and ease of application scalability. The author also mention that it has a very simple file organization, called model-service-controller, where the model layer is responsible for managing data, controller is responsible for managing input and output requests in our application and the service layer contains all the logic of implementation, part of this organization can be seen in \Cref{fig:architecture};
     % ===================================
     
     % ===================================
@@ -171,20 +171,20 @@ This section describes the design decisions taken to carry out this study and th
     % ===================================
     % Em relaçao a persistencia de dados, o NestJS permite a utilização de \acp{ORM}, que facilitam esta interaçao com os bancos de dados, ficando ele responsavel por todas as complicaçoes envolvidas neste processo, mais sobre o assunto sera explicado no \Cref{data-persistance}.
     
-    Regarding data persistence, Nest allows the use of \acp{ORM}, which is, as \textcite{Wiphusitphunpol_2017} said, a tool for mapping database query results to strongly typed or weakly typed objects in object-oriented programming languages, increasing the speed of development and maintainability. More on the subject will be explained in \Cref{data-persistence};
+    Regarding data persistence, Nest allows the use of \acp{ORM}, which are, as \textcite{Wiphusitphunpol_2017} said, a tool for mapping database query results to strongly typed or weakly typed objects in object-oriented programming languages, increasing the speed of development and maintainability. More on the subject will be explained in \Cref{data-persistence};
     % ===================================
     
     % ===================================
     % \item[\textbf{Architecture:}] A arquitetura escolhida para o desenvolvimento da Extensionly foi server-client model que de acordo com \textcite{puliafito_riccobene_scarpa}, é uma arquitetura que dispõe servicos ou servidores duplicados para uma rede de clientes que os utilizam. 
     
-    \item[\textbf{Architecture:}] The architecture chosen for the development of Extensionly was the server-client model which, according to \textcite{puliafito_riccobene_scarpa}, is an architecture that has duplicated services or servers for a network of clients that use them ;
+    \item[\textbf{Architecture:}] The architecture chosen for the development of Extensionly was the server-client model which, according to \textcite{puliafito_riccobene_scarpa}, is an architecture that has duplicated services or servers for a network of clients that use them.
     % ===================================
     
     % ===================================
     % Na \Cref{fig:architecture} está representado a arquitetura pensada para este \ac{MVP}, ainda há possibilidades de melhoria como por exemplo, adicionar um Load Balancer entre as chamadas do cliente para o servidor, sendo responsável por duplicar as instâncias existentes do servidor caso haja um pico de acessos na aplicação. Outra melhoria está na adição de cache nas chamadas para o banco de dados, que serve para acessar mais rapidamente dados que estão sendo requisitados com frequencia.
     
     The architecture designed for this \ac{MVP} is represented in \Cref{fig:architecture}, there are still possibilities for improvement, such as adding a server load balancer between client calls to the server, being responsible for spreading out the transmission of information flow and data operations, as well as lowering the risk of information loss and computing time, as \textcite{Chen_2015} described.
-    Another improvement is the addition of caching in calls to the database, which serves to more quickly access data that is being requested frequently;
+    Another improvement is the addition of caching in calls to the database, which serves to more quickly access data that is being requested frequentl.
     % ===================================
     
     \begin{figure}[htb]
@@ -210,7 +210,7 @@ This section describes the design decisions taken to carry out this study and th
     %   \item Possuir uma nterface uniforme.
     % \end{inparaenum}
     
-    The backend server uses the Rest API architecture, where \ac{API}, according to \textcite{restApi}, uses \ac{HTTP} requests such as:
+    The backend server uses the REST API architecture, where \ac{API}, according to \textcite{restApi}, uses \ac{HTTP} requests such as:
     \begin{inparaenum}[(1)]
       \item GET;
       \item POST;
@@ -315,7 +315,7 @@ For the deployment, Heroku will be used, which according to \textcite{heroku} is
 % ===================================
 % Este capitulo discorreu sobre decisões relacionadas a produção da ferramenta Extensionly, primeiro sendo explicado alguns pontos de atenção na \Cref{sec:ext-considerations}, logo na \Cref{sec:ext-req}, foram apresentados os requisitos finais levantados pela literatura cinza e as estorias de usuario com as suas pontuaçoes recebidas pela execução do survey. Por fim, \Cref{sec:ext-design} reporta as decisoes de design para a execução do projeto, como tecnologias e arquitetura utilizada.
 
-This chapter discussed decisions related to the production of the Extensionly tool, first explaining some points of attention in \Cref{sec:ext-considerations}, then in \Cref{sec:ext-req}, the final requirements raised by (Grey Literature) and user stories with their scores received for carrying out the survey. \Cref{sec:ext-design} reports the design decisions for the execution of the project, such as technologies and architecture used. Finally, in \Cref{sec:dev-ops}, some terms related to DevOps were discussed, along with the choices that will be used in the tool development processes.
+This chapter discussed decisions related to the production of the Extensionly tool, first explaining some points of attention in \Cref{sec:ext-considerations}, then in \Cref{sec:ext-req}, the final requirements raised by grey literature review and user stories with their scores received for carrying out the survey, are shown. \Cref{sec:ext-design} reports the design decisions for the execution of the project, such as technologies and architecture used. Finally, in \Cref{sec:dev-ops}, some terms related to \ac{DevOps} were discussed, along with the choices that will be used in the tool development processes.
 
 % ===================================
 
