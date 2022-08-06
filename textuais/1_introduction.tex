@@ -36,7 +36,7 @@ Therefore, it is necessary for some bodies to be responsible for managing these 
 
 The curricularization of the outreach described in Resolution No. 7 of 2018 \cite{Resolucao-MEC:2018}, explains that \acp{OA} must have their proposal, development and conclusion, duly recorded, documented and analyzed, so that it is possible to organize work plans, methodologies, instruments and knowledge generated. 
 Also ordering that educational institutions should include in their \ac{IDP}, at least 10\% (ten percent) of the total course load focused on \acp{OA}, in addition to all related terms, with a deadline of up to three years from the date of its approval. 
-In view of this demand, \acl{UNIPAMPA} created \ac{CONSUNI} Resolution No. 317 of April 29, 2021, \cite{CONSUNI-Unipampa:2021}, which implements all the guidelines presented by the \ac{MEC}.
+In view of this demand, \acl{UNIPAMPA} created \ac{CONSUNI} Resolution No. 317 of April 29, 2021, \cite{res317}, which implements all the guidelines presented by the \ac{MEC}.
 
 %==============================================================
 % Limitações da Unipampa
@@ -45,7 +45,7 @@ In view of this demand, \acl{UNIPAMPA} created \ac{CONSUNI} Resolution No. 317 o
 % Por causa disto, acaba fazendo com que a burocracia se concentre fora do sistema, tornando este processo chato e demorado, os professores muitas vezes até desistem de realiza-lo, optando por outras atividades menos burocráticas.
 
 To control all this, a complete software is indispensable, and that is easy to use, with which users are comfortable to use and can complete their tasks using it. 
-Currently, \acl{UNIPAMPA} only has a system called \ac{SAP}, which serves only for registration outreach projects, submit proposals to the public notices offered and manage the scholarship holders of the awarded notices, but does not support other processes. 
+Currently, \acl{UNIPAMPA} only has a system called \ac{SAP}, which serves for registration outreach projects, submit proposals to the public notices offered and manage the scholarship holders of the awarded notices, but does not contemplate the reach that we want to give. 
 Because of this, it ends up making the bureaucracy concentrate outside the system, making this process boring and time-consuming, teachers often even give up doing it, opting for other less bureaucratic activities.
 
 %==============================================================
@@ -66,9 +66,9 @@ When effective, in all undergraduate courses, a minimum workload of 60 and a max
 % Divulgação espalhada, muitos emails, alunos não veem
 % Literatura cinza e nao encontramos a melhor que resolvesse por completo os problemas não apenas parcialmente, citar duas (pode ser as do anteprojeto e mais algumas da literatura) 
 %==============================================================
-% O processo de curricularização proposto pela Resolução Nº 317 \cite{CONSUNI-Unipampa:2021}, se tornará obrigatório em 2023, tendo em vista o esforço que será necessário para completar demandas manualmente como cadastro, controle, emissão de certificados e ingresso dos participantes, implícitos em uma \ac{OCA}, fora proposto a criação de uma ferramenta de apoio na gestão destes projetos e programas de extensão, conseguindo assim diminuir a burocracia e agilizar o processo.
+% O processo de curricularização proposto pela Resolução Nº 317 \cite{res317}, se tornará obrigatório em 2023, tendo em vista o esforço que será necessário para completar demandas manualmente como cadastro, controle, emissão de certificados e ingresso dos participantes, implícitos em uma \ac{OCA}, fora proposto a criação de uma ferramenta de apoio na gestão destes projetos e programas de extensão, conseguindo assim diminuir a burocracia e agilizar o processo.
 
-The process of curricularization of outreach proposed by Resolution Nº 317 \cite{CONSUNI-Unipampa:2021}, will become mandatory in 2023, given the effort that will be required to manually complete demands such as registration, control, issuance of certificates and entry of participants, implicit in an \ac{OCA}, it was proposed to create a support tool in the management of these projects and outreach programs, thus managing to reduce bureaucracy and speed up the process.
+The process of curricularization of outreach proposed by Resolution Nº 317 \cite{res317}, will become mandatory in 2023, given the effort that will be required to manually complete demands such as registration, control, issuance of certificates and entry of participants, implicit in an \ac{OCA}, it was proposed to create a support tool in the management of these projects and outreach programs, thus managing to reduce bureaucracy and speed up the process.
 
 %==============================================================
 
@@ -101,11 +101,20 @@ Another motivator that encouraged the development of this tool is that from the 
 % Facilitar a comunicação entre aluno e professor
 % 
 
-% Tendo em vista o que foi apresentado, o objetivo geral do tema deste TCC, é o desenvolvimento do \textit{back-end} de uma ferramenta que servira de apoio na gestão de programas e projetos de extensão, reproduzindo e auxiliando em todos os processos referentes a este assunto, desde sua criação até a geração de certificados quando for finalizada. O intuito é diminuir o esforço e tempo gasto pelos envolvidos, nestas etapas manuais do processos, além disso, permitir que seja construido um novo canal de comunicação entre comunidade acadêmica e comunidade externa, permitindo sugestões de demandas para atividades de extensão diretamente na ferramenta.
+% Tendo em vista o que foi apresentado, o objetivo geral do tema deste TCC, é o desenvolvimento do \textit{backend} de uma ferramenta que servira de apoio na gestão de programas e projetos de extensão, reproduzindo e auxiliando em todos os processos referentes a este assunto, desde sua criação até a geração de certificados quando for finalizada. O intuito é diminuir o esforço e tempo gasto pelos envolvidos, nestas etapas manuais do processos, além disso, permitir que seja construido um novo canal de comunicação entre comunidade acadêmica e comunidade externa, permitindo sugestões de demandas para atividades de extensão diretamente na ferramenta.
 
-In view of what has been presented, the research aim of the theme of this term paper is the development of the \textit{back-end} of a tool that will serve as support in the management of outreach programs and projects, reproducing and assisting in all processes related to this demand, from its creation to the generation of certificates when it is finalized. 
+In view of what has been presented, the research aim of the theme of this term paper is the development of the backend of a tool that will serve as support in the management of outreach programs and projects, reproducing and assisting in all processes related to this demand, from its creation to the generation of certificates when it is finalized. 
 The aim is to reduce the effort and time spent by those involved in these manual steps of the process. 
 In addition to allowing a new communication channel to be built between the academic community and the external community, allowing suggestions for demands for \acp{OA} directly in the tool.
+
+The following research objectives were established in order to achieve the research goal:
+\begin{itemize}
+  \item Systematically review grey literature works and products to find comparable solutions, collecting the first batch of requirements.
+  \item Elaborate a survey, according to \textcite{kasunic2005designing}, in order to identify new system requirements and to better comprehend the requirements of the intended users.
+  \item Create concrete tasks and an implementation roadmap by analyzing the findings and refining the elicited requirements.
+  \item Study the most relevant tools, programming languages, and frameworks to create a stack that offers excellent code maintainability, architecture, and performance.
+  \item Create an operational \acl{MVP} (\ac{MVP}) of the system that initially implements the most important requirements that have been gathered and refined.
+\end{itemize}
 
 % Portanto, na Tabela \ref{tbl:tableObjectives} é apresentada a síntese dos objetivos gerais e específicos, bem como o assunto, o tema, o problema de pesquisa e a hipótese de solução.
 
@@ -124,21 +133,31 @@ Therefore, the Table \ref{tbl:tableObjectives} presents the synthesis of the res
 
 % A proposta para esta ferramenta é projetada para a participação de dois alunos, Igor Dalepiane da Costa e Lucas Alexandre Fell, pois a sua complexidade é alta, justificando este desenvolvimento em dupla.
 
-The proposal for this tool is designed for the participation of two students, Igor Dalepiane da Costa and Lucas Alexandre Fell, because its complexity is high, justifying this double development.
+% A principal contribuição deste estudo é o desenvolvimento MVp para o backend de uma ferramenta to support and automate the whole process of \aclp{OCA} in the university. 
+% Tambem é esperado a geração de dois artefatos, uma revisão sistematica na literatura cinza, para levantar ferramentas semelhantes a proposta, e coletar as suas funcionalidades e detalhes mais importantes. 
+% Também será executado um survey com possiveis usuarios finais da ferramenta, para a classificação por relevancia dos requisitos levantados e para entender mais sobre a real necessidade deste publico.
 
-% Para isto foi feito a divisão entre o desenvolvimento do  \textit{back-end} e  \textit{front-end}, o primeiro sendo desenvolvido por pelo proponente deste trabalho e o segundo pelo outro estudante. Para melhor visualização foi desenvolvido um \textit{feature model} com a divisão exata das tarefas que serão desempenhadas por cada um dos estudantes, representado na Figura 1. São contribuições deste trabalho:
+The main contribution of this study is the \ac{MVP} development for the backend of a tool to support and automate the whole process of \aclp{OCA} in the university.
+It is also expected the generation of two artifacts, a systematic review in the gray literature, to raise tools similar to the proposal, and collect their most important features and details.
+A survey will also be carried out with possible end users of the tool, to classify the requirements raised by relevance and to understand more about the real need of this public.
 
-For this, the division was made between the development of \textit{back-end} and \textit{front-end}, the first being developed by the proponent of this work and the second by the other student. For better visualization, a feature model was developed with the exact division of the tasks that will be performed by each of the students, represented in Figure 1. Contributions of this work:
+The proposal for this tool is designed for the participation of two students because its complexity is high, justifying this double development, Igor Dalepiane da Costa, being responsible for the backend and Lucas Alexandre Fell, responsible for the frontend. Regarding the artifacts created to support the research, such as the survey and the systematic review of the grey literature, they were all completed in collaboration by both authors and are not specifically related to any one piece of work.
+
+% Para isto foi feito a divisão entre o desenvolvimento do  \textit{backend} e  \textit{front-end}, o primeiro sendo desenvolvido por pelo proponente deste trabalho e o segundo pelo outro estudante. Para melhor visualização foi desenvolvido um \textit{feature model} com a divisão exata das tarefas que serão desempenhadas por cada um dos estudantes, representado na Figura 1. São contribuições deste trabalho:
+
+
+
+% For this, the division was made between the development of \textit{backend} and \textit{front-end}, the first being developed by the proponent of this work and the second by the other student. For better visualization, a feature model was developed with the exact division of the tasks that will be performed by each of the students, represented in Figure 1. Contributions of this work:
 
 % \begin{itemize}
 %     \item Pesquisa entre os docentes da universidade sobre a real necessidade deste instrumento de organização dos processos das \acp{OCA}.
-%     \item Desenvolvimento do  \textit{back-end} do sistema, englobando todos os processos que serão disponibilizados pela ferramenta, explicitados na Figura 1.
+%     \item Desenvolvimento do  \textit{backend} do sistema, englobando todos os processos que serão disponibilizados pela ferramenta, explicitados na Figura 1.
 % \end{itemize}
 
-\begin{itemize}
-    \item Research among university professors on the real need for this instrument to organize the \acp{OCA} processes;
-    \item Development of the \textit{back-end} of the system, encompassing all the processes that will be made available by the tool, explained in \Cref{fig:featuremodel}.
-\end{itemize}
+% \begin{itemize}
+%     \item Research among university professors on the real need for this instrument to organize the \acp{OCA} processes;
+%     \item Development of the \textit{backend} of the system, encompassing all the processes that will be made available by the tool, explained in \Cref{fig:featuremodel}.
+% \end{itemize}
 
 % \input{componentes/featureModel}
 
