@@ -33,13 +33,14 @@
 % http://porteiras.r.unipampa.edu.br/portais/sisbi/programa-de-capacitacao/
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\documentclass[12pt,openright,twoside,a4paper,chapter=TITLE]{abntex2}    % frente e verso
+\documentclass[12pt,openright,twoside,a4paper,chapter=TITLE,english]{abntex2}    % frente e verso
 %\documentclass[12pt,oneside,a4paper]{abntex2}            % apenas frente
 
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % PACOTES
 % -------------------------------------------------------------------------------------------------
 % Pacotes fundamentais
+\usepackage[style=abnt,backref=true]{biblatex}
 \usepackage{cmap}           % Mapeamento de caracteres especiais no PDF
 \usepackage{lmodern}        % Usa fonte Latin Modern
 \usepackage[T1]{fontenc}    % Seleção de codificação de fonte
@@ -60,8 +61,9 @@
 
 % -------------------------------------------------------------------------------------------------
 % Para citações
-\usepackage[brazilian,hyperpageref]{backref} % Páginas com as citações na bibliografia
-\usepackage[alf,abnt-emphasize=bf]{abntex2cite} % Citações padrão ABNT (alfanumérico)
+% \usepackage[brazilian,hyperpageref]{backref} % Páginas com as citações na bibliografia
+% \usepackage[alf,abnt-emphasize=bf]{abntex2cite} % Citações padrão ABNT (alfanumérico)
+
 % -------------------------------------------------------------------------------------------------
 % Pacotes opcionais
 \usepackage{nomencl}        % Para criar uma lista de símbolos
@@ -237,35 +239,35 @@ module minimum width=1.5cm, module minimum height=1.0cm,arrow tip=to,uniform con
   \renewcommand{\subsectionautorefname}{Section}
   \renewcommand{\subsubsectionautorefname}{Section}
   \renewcommand{\paragraphautorefname}{Section}
-  \renewcommand{\englishbibname}{References}
-  \renewcommand{\englishindexname}{Index}
-  \renewcommand{\englishlistfigurename}{List of Figures}
-  \renewcommand{\englishfigurename}{Figure}
-  \renewcommand{\englishlisttablename}{List of Tables}
-  \renewcommand{\englishtablename}{Table}
-  \renewcommand{\englishcontentsname}{List of Contents}
-  \renewcommand{\englishchaptername}{Chapter}
-  \renewcommand{\imprimirtipotrabalho}{Term Paper}
+%   \renewcommand{\englishbibname}{References}
+%   \renewcommand{\englishindexname}{Index}
+%   \renewcommand{\englishlistfigurename}{List of Figures}
+%   \renewcommand{\englishfigurename}{Figure}
+%   \renewcommand{\englishlisttablename}{List of Tables}
+%   \renewcommand{\englishtablename}{Table}
+%   \renewcommand{\englishcontentsname}{List of Contents}
+%   \renewcommand{\englishchaptername}{Chapter}
+  \renewcommand{\imprimirtipotrabalho}{Term Paper }
 }
 
 % -------------------------------------------------------------------------------------------------
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Cited in page(s):~}
-\renewcommand*{\backrefsep}{,~}%
-\renewcommand*{\backreftwosep}{,~}% ', and~'
-\renewcommand*{\backreflastsep}{,~}% ' and~'
-% Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-    \ifcase #1 %
-        No text citation.%
-    \or
-        Cited in page #2.%
-    \else
-        Cited #1 times on pages #2.%
-    \fi}%
+% \renewcommand{\backrefpagesname}{Cited in page(s):~}
+% \renewcommand*{\backrefsep}{,~}%
+% \renewcommand*{\backreftwosep}{,~}% ', and~'
+% \renewcommand*{\backreflastsep}{,~}% ' and~'
+% % Texto padrão antes do número das páginas
+% \renewcommand{\backref}{}
+% % Define os textos da citação
+% \renewcommand*{\backrefalt}[4]{
+%     \ifcase #1 %
+%         No text citation.%
+%     \or
+%         Cited in page #2.%
+%     \else
+%         Cited #1 times on pages #2.%
+%     \fi}%
 % -------------------------------------------------------------------------------------------------
 % Configurações de aparência do PDF final
 %\definecolor{blue}{RGB}{41,5,195}
@@ -338,11 +340,12 @@ module minimum width=1.5cm, module minimum height=1.0cm,arrow tip=to,uniform con
 \preambulo{\imprimirtipotrabalho presented in Software Engineering Graduation Course in the Federal University of Pampa as a partial requirement for obtaining the title of Software Engineering
 Bachelor}
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+\setlength\bibitemsep{1.8\itemsep}
+\addbibresource{bibliografia.bib}
 \makeindex % Compila o indice
 \makenomenclature % Compila a lista de abreviaturas e siglas
 \input{acro}
-
+% \DeclareUnicodeCharacter{0301}{*************************************}
 % ************************************************************************************************
 \begin{document}
 \include{consertos} % Inclui alguns ajustes finos para que fique de acordo com o Manual de Normatização
@@ -409,7 +412,8 @@ Bachelor}
 \postextual
 
 % Nome(s) do(s) arquivo(s) .bib (sem a extensão)
-\bibliography{bibliografia}
+% \bibliography{bibliografia}
+\printbibliography[title={References}]
 
 \input{postextuais/apendices} % Apêndices [OPCIONAL]
 \input{postextuais/anexos} % Anexos [OPCIONAL]
